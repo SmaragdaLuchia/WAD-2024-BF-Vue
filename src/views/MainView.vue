@@ -1,11 +1,11 @@
 
 <script setup>
 
+import PostCompo from "@/components/PostCompo.vue";
 </script>
 
 <template>
-  <div>
-  </div>
+  <PostCompo></PostCompo>
 </template>
 
 <style scoped>

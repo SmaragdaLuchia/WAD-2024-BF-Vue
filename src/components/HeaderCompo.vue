@@ -18,9 +18,9 @@ export default {
 <style scoped>
 
 #header{
-  background: #1862c9;
+  background: #868480;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 10px 20px;
 }
 
@@ -31,11 +31,11 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #7d6a99;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2c3e50;
 }
 
 </style>
