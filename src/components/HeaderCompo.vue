@@ -18,10 +18,16 @@ export default {
 <style scoped>
 
 #header{
-  background: #868480;
+  /*design*/
+  background: #D4C4CB;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px 20px;
+  border-radius: 1rem;
+  /*Container properties*/
+  display: flex;
+
 }
 
 
@@ -30,12 +36,16 @@ nav {
 }
 
 nav a {
+  text-decoration: none;
   font-weight: bold;
-  color: #7d6a99;
+  font-size: 20px;
+  color: #3C3C3C;
+  margin: 5px;
 }
 
 nav a.router-link-exact-active {
-  color: #2c3e50;
+  color: #6A4D59;
+  text-decoration: underline;
 }
 
 </style>

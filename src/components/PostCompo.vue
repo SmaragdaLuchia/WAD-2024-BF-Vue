@@ -1,6 +1,7 @@
 <template>
   <div id="Container">
-    <div id=postCompo >
+    <div class=postCompo >
+      <p>You're all caught up!</p>
       <div class="post" v-for="post in postList" :key="post.id">
         <div class="accountDateContainer">
           <p class="account">{{post.account}}</p>
@@ -9,13 +10,13 @@
         <div class="postText">
           <h3>{{post.PostText}}</h3>
         </div>
-        <!--  <div v-if="post.picInfo !== null && post.picInfo !== undefined">
-                <img :src="post.picInfo">
-              </div> -->
+           <div v-if="post.picInfo !== null && post.picInfo !== undefined">
+                <img class="postPic" :src="post.picInfo">
             </div>
-            <p>Check out your feed</p>
-          </div>
-        </div>
+      </div>
+      <p>Check out your feed</p>
+    </div>
+  </div>
       </template>
 
 
@@ -38,11 +39,12 @@
         align-items: center;
       }
 
-      #postCompo {
-        background: antiquewhite;
+      .postCompo {
+        background: #D4C4CB;
         padding: 5px;
-        min-height: 60vh;
+        min-height: 75vh;
         margin-bottom:20px;
+        border-radius: 1rem;
         /*for responsiveness*/
         width: 80%;
         max-width: 1000px;
@@ -55,7 +57,7 @@
       }
 
       .post {
-        background: #9c8aa8;
+        background: #FFEFEB;
         margin: 5px;
         min-height: 10vh;
         /*for responsiveness*/
@@ -92,6 +94,17 @@
       .postText h3 {
         margin-top: 0px;
         margin-left: 10px;
+      }
+
+      .postPic {
+        height: auto;
+        width: 60%;
+        margin-bottom: 20px;
+        border-radius: 1rem;
+      }
+
+      .postCompo div {
+        border-radius: 1rem;
       }
 
       </style>
