@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <HeaderCompo/>
-    <router-view/>
-    <FooterCompo/>
+    <HeaderCompo />
+    <router-view />
+    <FooterCompo />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import FooterCompo from "@/components/FooterCompo.vue";
 
 export default {
   name: 'App',
-  components: {FooterCompo, HeaderCompo}
+  components: { FooterCompo, HeaderCompo }
 };
 </script>
 
@@ -28,5 +28,14 @@ export default {
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+}
+
+html,
+body {
+  margin: 0;
+  /* Ensure no extra margins */
+  padding: 0;
+  height: 100%;
+  /* Allow proper layout calculations */
 }
 </style>

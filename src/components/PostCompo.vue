@@ -1,28 +1,28 @@
 <script setup>
-  import { defineProps, defineEmits } from "vue";
+import { defineProps, defineEmits } from "vue";
 
-  const props = defineProps({
-    post: {
-      type: Object,
-      required: true
-    }
-  });
-
-  const emit = defineEmits(["like-post"]);
-
-  const likePost = () => {
-    emit("like-post", props.post.id);
+const props = defineProps({
+  post: {
+    type: Object,
+    required: true
   }
+});
+
+const emit = defineEmits(["like-post"]);
+
+const likePost = () => {
+  emit("like-post", props.post.id);
+}
 </script>
 
 <template>
   <div class="post">
     <div class="accountDateContainer">
-      <p class="account">{{post.account}}</p>
-      <p class="date">{{post.postDate}}</p>
+      <p class="account">{{ post.account }}</p>
+      <p class="date">{{ post.postDate }}</p>
     </div>
     <div class="postText">
-      <h3>{{post.PostText}}</h3>
+      <h3>{{ post.PostText }}</h3>
     </div>
     <div v-if="post.picInfo !== null && post.picInfo !== undefined">
       <img class="postPic" :src="post.picInfo">
@@ -30,13 +30,12 @@
     <div class="likeContainer">
       <img class="likeButton" src="../../public/images/like.png" @click="likePost">
       <p>Likes: </p>
-      <p>{{post.likeCount}}</p>
+      <p>{{ post.likeCount }}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
-
 div {
   border-radius: 1rem;
 }
@@ -95,12 +94,13 @@ div {
 }
 
 .likeButton {
-  height: 4vh;
+  height: 24px;
   place-items: center;
   margin: 10px;
   margin-top: 0;
 }
-.likeButton ~ p {
+
+.likeButton~p {
   margin: 10px;
   margin-left: 0px;
   place-self: center;

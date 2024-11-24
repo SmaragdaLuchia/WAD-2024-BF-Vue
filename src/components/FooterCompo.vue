@@ -20,12 +20,13 @@
 #footer {
   background: #D4C4CB;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
-  margin-top: auto;
   padding: 10px 20px;
   border-radius: 1rem;
   /*Container properties*/
   display: flex;
+  margin: 10px;
+
+
 }
 
 .innerContainer1 {

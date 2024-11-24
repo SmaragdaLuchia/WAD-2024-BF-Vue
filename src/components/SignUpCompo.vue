@@ -1,37 +1,39 @@
 <template>
-  <div class="signup">
-    <form @submit.prevent="handleSignup">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          id="email"
-          v-model="email"
-          type="email"
-          @input="validateEmail"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          id="password"
-          v-model="password"
-          type="password"
-          @input="validatePassword"
-          required
-        />
-      </div>
-      <p v-if="emailError" class="error">{{ emailError }}</p>
-      <p v-if="errorMessages.length > 0" class="error">
-        The password is not valid:
-        <span v-for="(error, index) in errorMessages" :key="index">
-          {{ error }}<br />
-        </span>
-      </p>
-      <button type="submit" :disabled="emailError || errorMessages.length > 0">
-        Sign Up
-      </button>
-    </form>
+  <div id="signup-container">
+    <div class="signup">
+      <form @submit.prevent="handleSignup">
+        <div class="form-group">
+          <label for="email">Email: </label>
+          <input
+            id="email"
+            v-model="email"
+            type="email"
+            @input="validateEmail"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password: </label>
+          <input
+            id="password"
+            v-model="password"
+            type="password"
+            @input="validatePassword"
+            required
+          />
+        </div>
+        <p v-if="emailError" class="error">{{ emailError }}</p>
+        <p v-if="errorMessages.length > 0" class="error">
+          The password is not valid:
+          <span v-for="(error, index) in errorMessages" :key="index">
+            {{ error }}<br />
+          </span>
+        </p>
+        <button type="submit" :disabled="emailError || errorMessages.length > 0">
+          Sign Up
+        </button>
+      </form>
+    </div>
   </div>
 </template>
 
@@ -96,31 +98,45 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 .signup {
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
+  margin-bottom: 20px;
+  background-color: #D4C4CB;
 }
+
 .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 15px;
+  width: 100%;
 }
 label {
   margin-bottom: 5px;
 }
 
 input {
+  width: 200px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 button {
+  background-color:#6A4D59;
   padding: 10px;
+  border-radius: 5px;
+  color: #FFFBFA;
 }
 button:hover {
-  background-color: #adabab;
+  background-color: #8A6D79;
 }
 .error {
   color: red;

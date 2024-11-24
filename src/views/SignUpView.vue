@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="compos">
     <HeaderCompo />
     <SignUpCompo />
     <FooterCompo />
@@ -12,5 +12,10 @@ import SignUpCompo from "../components/SignUpCompo.vue";
 
 
 <style scoped>
+.compos {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 </style>
