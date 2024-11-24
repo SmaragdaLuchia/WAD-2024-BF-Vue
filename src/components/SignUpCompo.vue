@@ -1,5 +1,4 @@
 <template>
-  <div id="signup-container">
     <div class="signup">
       <form @submit.prevent="handleSignup">
         <div class="form-group">
@@ -34,7 +33,6 @@
         </button>
       </form>
     </div>
-  </div>
 </template>
 
 <script>
@@ -108,7 +106,7 @@ export default {
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
-  margin-bottom: 20px;
+  margin-bottom: 25vh;
   background-color: #D4C4CB;
 }
 

@@ -23,6 +23,8 @@ export default {
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px 20px;
   border-radius: 1rem;
   /*Container properties*/
