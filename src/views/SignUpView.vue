@@ -7,11 +7,12 @@
 </template>
 
 <script setup>
-import SignUpCompo from "../components/SignUpCompo.vue";
+import SignUpCompo from "@/components/SignUpCompo.vue";
 </script>
 
 
 <style scoped>
+
 .compos {
   display: flex;
   flex-direction: column;

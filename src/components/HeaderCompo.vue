@@ -5,6 +5,7 @@
     <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/SignUp">SignUp</router-link>
+      <router-link to="/Login">Login</router-link>
     </nav>
   </div>
 </template>
